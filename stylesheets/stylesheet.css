@@ -66,8 +66,8 @@ a {
 .page-header {
   color: #fff;
   /*border-bottom: thick solid #e36f3c;*/
-  background-color: #505050;
-  background: linear-gradient(130deg, #0006, #000C), url("../images/texture.jpg") no-repeat center;
+  /*background-color: #000;*/
+  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.jpg") no-repeat center, #505050;
   background-size: cover; }
 
 @media screen and (min-width: 64em) {

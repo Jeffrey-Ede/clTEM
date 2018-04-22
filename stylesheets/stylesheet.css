@@ -23,8 +23,8 @@ a {
   display: inline-block;
 /*  margin-bottom: 1rem;*/
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(163, 198, 134, 0.3);
-  border-color: rgba(163, 198, 134, 0.5);
+  background-color: rgba(163, 198, 134, 0.7);
+  border-color: rgba(163, 198, 134, 0.9);
   border-style: solid;
   min-width: 200px;
   text-align: center;
@@ -41,8 +41,8 @@ a {
   -webkit-touch-callout: none;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  background-color: rgba(106, 157, 26, 0.5); /*06CE3F*/
-  border-color: rgba(106, 157, 26, 0.7); }
+  background-color: rgba(106, 157, 26, 0.7); /*06CE3F*/
+  border-color: rgba(106, 157, 26, 0.9); }
 
 @media screen and (min-width: 64em) {
   .btn {

@@ -67,16 +67,62 @@
 </nav>
 
 <section id="centre-content" class="main-content">
-  <div id="guts">
+<div id="guts">
 
-  <h3><a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input</h3>
+<h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input</h1>
 
-  <p>
-    Test text
-  </p>
+<p>
+    
+Currently, the only supported file format are <mark>.xyz</mark> files. However, some modification are supported so that occupancy and thermal parameters can be supported.
 
-  </div>
-  </section>
+</p>
+
+<h2> Basic <mark>.xyz</mark> files </h2>
+
+<p>
+At it's simplest, the <mark>.xyz</mark> file has 3 main sections:
+
+<ul>
+ <li>the number of atoms in the structure</li>
+ <li>a comment section</li>
+ <li>the atoms and their coordinates</li>
+</ul>
+
+The first line contains the number of atoms and the second line is reserved for comments. Every line after that represents an atom, in the form: <mark>A x y z</mark>, where <mark>A</mark> is the element symbol and <mark>x</mark>, <mark>y</mark>, <mark>z</mark> are the cartesian coordinates in Å. If you want to use the coordinates in nm, then include the term <mark>nm</mark> anywhere in the comments line (with whitespace either side). The use of nm then applied to all relevant units in the file (such as thermal vibrations).
+
+</p>
+
+<h2>Extra information</h2>
+
+<p>
+
+To add any more information, clTEM will look at the comments section as a sort of header section for the columns. This has defaults and multiple options to try and easily support as much as possible. They keywords that are looked for are <mark>A</mark>, <mark>x</mark>, <mark>y</mark>, <mark>z</mark>, <mark>occ</mark>, <mark>u</mark>, <mark>ux</mark>, <mark>uy</mark> and <mark>uz</mark>. Any other terms will be ignored, so comments can be added (just make sure they don't contain any of these terms separated by spaces).
+
+</p>
+<p>
+
+<mark>A</mark>, <mark>x</mark>, <mark>y</mark>, <mark>z</mark> do not need to be stated, if none of them are found, it is assumed that they form columns 1-4 in the order shown. Other terms are then treated as columns 5 onwards, in the order they are written in the comments section.
+
+</p>
+
+<h3>Occupancy</h3>
+
+<p>
+
+Many structures require occupancies for the same sites. If the column <mark>occ</mark> is defined, clTEM will detect atoms that share the same site **if they are placed on consecutive lines** in the <mark>.xyz</mark>.
+
+</p>
+
+<h3>Thermal vibrations</h3>
+
+<p>
+
+Thermal vibrations are defined by the headers <mark>u</mark>, <mark>ux</mark>, <mark>uy</mark> and <mark>uz</mark> that define the isotropic vibration and then the vibration specific to each cartesian axis. <mark>u</mark> is set first, then any of <mark>ux</mark>, <mark>uy</mark> or <mark>uz</mark> will override the relevant component of <mark>u</mark>. <mark>u</mark> is defined here as the mean square displacement of the atom, <u²>, and will have the units of Å² (or nm² if the <mark>nm</mark> tag has been set).
+
+</p>
+
+</div>
+</section>
 
   <footer class="site-footer">
     <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>

@@ -454,3 +454,36 @@ a {
 } 
 
 /* End of topnav */
+
+mark {
+    background-color: #edede8;
+    color: #666;
+    border-radius: 3px;
+    padding: 3px;
+    font-style: italic;
+}
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+
+.image-figure {
+    padding: 0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.image-figure img{
+    vertical-align: middle;
+    width: 30%;
+}
+
+.image-figure p{
+    text-align: justify;
+    font-size: 14px;
+}
+
+.figure-title{
+    font-size: 14px;
+    color: #024e18;
+    font-weight: bold;
+}

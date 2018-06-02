@@ -9,4 +9,5 @@ function closeMenu() {
 
 function toggleDropdown() {
     document.getElementsByClassName("dropdown-content")[0].classList.toggle("displayed");
+    document.getElementsByClassName("dropdown")[0].classList.toggle("expanded");
 }

@@ -466,24 +466,17 @@ mark {
  /* Three image containers (use 25% for four, and 50% for two, etc) */
 
 .image-figure {
-    padding: 0;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
     text-align: center;
 }
 .image-figure img{
-    vertical-align: middle;
-    width: 30%;
+
+    height: 256px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-figure p{
     text-align: justify;
     font-size: 14px;
-}
-
-.figure-title{
-    font-size: 14px;
-    color: #024e18;
-    font-weight: bold;
 }

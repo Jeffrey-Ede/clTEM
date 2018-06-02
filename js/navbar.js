@@ -6,3 +6,7 @@ function toggleMenu() {
 function closeMenu() {
     document.getElementsByClassName("topnav")[0].classList.toggle("responsive", false);
 }
+
+function toggleDropdown() {
+    document.getElementsByClassName("dropdown-content")[0].classList.toggle("displayed");
+}

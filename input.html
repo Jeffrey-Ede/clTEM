@@ -73,14 +73,14 @@
 
 <p>
     
-Currently, the only supported file format are <mark>.xyz</mark> files. However, some modification are supported so that occupancy and thermal parameters can be supported.
+Currently, the only supported file format are .xyz files. However, some modification are supported so that occupancy and thermal parameters can be supported.
 
 </p>
 
-<h2> Basic <mark>.xyz</mark> files </h2>
+<h2> Basic .xyz files </h2>
 
 <p>
-At it's simplest, the <mark>.xyz</mark> file has 3 main sections:
+At it's simplest, the .xyz file has 3 main sections:
 
 <ul>
  <li>the number of atoms in the structure</li>
@@ -88,7 +88,7 @@ At it's simplest, the <mark>.xyz</mark> file has 3 main sections:
  <li>the atoms and their coordinates</li>
 </ul>
 
-The first line contains the number of atoms and the second line is reserved for comments. Every line after that represents an atom, in the form: <mark>A x y z</mark>, where <mark>A</mark> is the element symbol and <mark>x</mark>, <mark>y</mark>, <mark>z</mark> are the cartesian coordinates in Å. If you want to use the coordinates in nm, then include the term <mark>nm</mark> anywhere in the comments line (with whitespace either side). The use of nm then applied to all relevant units in the file (such as thermal vibrations).
+The first line contains the number of atoms and the second line is reserved for comments. Every line after that represents an atom, in the form: <code>A x y z</code>, where <code>A</code> is the element symbol and <code>x</code>, <code>y</code>, <code>z</code> are the cartesian coordinates in Å. If you want to use the coordinates in nm, then include the term <code>nm</code> anywhere in the comments line (with whitespace either side). The use of nm then applied to all relevant units in the file (such as thermal vibrations).
 
 </p>
 
@@ -96,12 +96,12 @@ The first line contains the number of atoms and the second line is reserved for 
 
 <p>
 
-To add any more information, clTEM will look at the comments section as a sort of header section for the columns. This has defaults and multiple options to try and easily support as much as possible. They keywords that are looked for are <mark>A</mark>, <mark>x</mark>, <mark>y</mark>, <mark>z</mark>, <mark>occ</mark>, <mark>u</mark>, <mark>ux</mark>, <mark>uy</mark> and <mark>uz</mark>. Any other terms will be ignored, so comments can be added (just make sure they don't contain any of these terms separated by spaces).
+To add any more information, clTEM will look at the comments section as a sort of header section for the columns. This has defaults and multiple options to try and easily support as much as possible. They keywords that are looked for are <code>A</code>, <code>x</code>, <code>y</code>, <code>z</code>, <code>occ</code>, <code>u</code>, <code>ux</code>, <code>uy</code> and <code>uz</code>. Any other terms will be ignored, so comments can be added (just make sure they don't contain any of these terms separated by spaces).
 
 </p>
 <p>
 
-<mark>A</mark>, <mark>x</mark>, <mark>y</mark>, <mark>z</mark> do not need to be stated, if none of them are found, it is assumed that they form columns 1-4 in the order shown. Other terms are then treated as columns 5 onwards, in the order they are written in the comments section.
+<code>A</code>, <code>x</code>, <code>y</code>, <code>z</code> do not need to be stated, if none of them are found, it is assumed that they form columns 1-4 in the order shown. Other terms are then treated as columns 5 onwards, in the order they are written in the comments section.
 
 </p>
 
@@ -109,7 +109,7 @@ To add any more information, clTEM will look at the comments section as a sort o
 
 <p>
 
-Many structures require occupancies for the same sites. If the column <mark>occ</mark> is defined, clTEM will detect atoms that share the same site **if they are placed on consecutive lines** in the <mark>.xyz</mark>.
+Many structures require occupancies for the same sites. If the column <code>occ</code> is defined, clTEM will detect atoms that share the same site **if they are placed on consecutive lines** in the .xyz.
 
 </p>
 
@@ -117,9 +117,24 @@ Many structures require occupancies for the same sites. If the column <mark>occ<
 
 <p>
 
-Thermal vibrations are defined by the headers <mark>u</mark>, <mark>ux</mark>, <mark>uy</mark> and <mark>uz</mark> that define the isotropic vibration and then the vibration specific to each cartesian axis. <mark>u</mark> is set first, then any of <mark>ux</mark>, <mark>uy</mark> or <mark>uz</mark> will override the relevant component of <mark>u</mark>. <mark>u</mark> is defined here as the mean square displacement of the atom, <u²>, and will have the units of Å² (or nm² if the <mark>nm</mark> tag has been set).
+Thermal vibrations are defined by the headers <code>u</code>, <code>ux</code>, <code>uy</code> and <code>uz</code> that define the isotropic vibration and then the vibration specific to each cartesian axis. <code>u</code> is set first, then any of <code>ux</code>, <code>uy</code> or <code>uz</code> will override the relevant component of <code>u</code>. <code>u</code> is defined here as the mean square displacement of the atom, <u²>, and will have the units of Å² (or nm² if the <code>nm</code> tag has been set).
 
 </p>
+
+<h3>Example file</h3>
+
+<p>Below is a small example file with occupancy and thermal parameters</p>
+
+<pre>
+6
+occ u
+Pb 0.0 0.0 0.0 1.0 0.0056
+Pb 4.0 0.0 0.0 1.0 0.0056
+Pb 4.0 4.0 0.0 1.0 0.0056
+Pb 0.0 4.0 0.0 1.0 0.0056
+Ti 2.0 2.0 0.0 0.8 0.0103
+Zr 2.0 2.0 0.0 0.2 0.0048
+</pre>
 
 </div>
 </section>

@@ -474,15 +474,7 @@ a {
 
 /* End of topnav */
 
-mark {
-    background-color: #edede8;
-    color: #666;
-    border-radius: 3px;
-    padding: 3px;
-    font-style: italic;
-}
-
- /* Three image containers (use 25% for four, and 50% for two, etc) */
+ /* Image containers */
 
 .image-figure {
     text-align: center;

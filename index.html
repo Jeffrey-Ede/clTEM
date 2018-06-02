@@ -43,14 +43,27 @@
       <!-- <a href="https://github.com/JJPPeters/Strainpp/releases/download/v1.4/Install_Strain.exe" class="btn">Installer (Win x64)</a> -->
     </section>
 <nav>
-<ul class="topnav">
-  <li><a href="index.html" onclick="closeMenu()">About</a></li>
-  <!-- <li><a href="manual.html" onclick="closeMenu()">Manual</a></li> -->
-  <!-- <li><a href="theory.html" onclick="closeMenu()">Theory</a></li> -->
-  <li class="icon" >
-    <a href="javascript:void(0);" onclick="toggleMenu()"><img src="images/navicon.svg" alt="" style="height: 1em; width: 1em;"></a>
-  </li>
-</ul>
+<div class="topnav">
+  <a href="index.html" class="active" onclick="closeMenu()">Home</a></li>
+
+  <div class="dropdown">
+    <button class="dropbtn">Guide
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#input.html">Input</a>
+      <a href="#config.html">Configuration</a>
+      <a href="#simulate.html">Simulating</a>
+      <a href="#export.html">Export</a>
+    </div>
+  </div>
+
+  <a href="#compile.html" onclick="closeMenu()">Compilation</a></li>
+
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  <!-- <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><img src="images/navicon.svg" alt="" style="height: 1em; width: 1em;"></a> -->
+
+</div>
 </nav>
 
 <section id="centre-content" class="main-content">

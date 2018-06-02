@@ -2,7 +2,3 @@
 function toggleMenu() {
     document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }
-
-function closeMenu() {
-    document.getElementsByClassName("topnav")[0].classList.toggle("responsive", false);
-}

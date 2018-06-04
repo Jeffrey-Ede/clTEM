@@ -23,8 +23,8 @@ a {
   display: inline-block;
 /*  margin-bottom: 1rem;*/
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(123, 173, 82, 0.7);
-  border-color: rgba(123, 173, 82, 0.9);
+  background-color: #648430b2;
+  border-color: #648430e6;
   border-style: solid;
   min-width: 200px;
   text-align: center;
@@ -173,7 +173,7 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #507613; }
+  color: #648430; }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
@@ -343,6 +343,18 @@ a {
     overflow: hidden;
 }
 
+@media screen and (min-width: 64em) {
+  topnav {
+    padding: 0rem 5rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  topnav {
+    padding: 0rem 3rem; } }
+
+@media screen and (max-width: 42em) {
+  topnav {
+    padding: 0rem 0rem; } }
+
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
@@ -387,7 +399,7 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #404040;
+    background-color: #666;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -405,19 +417,14 @@ a {
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #2c3e1d;
+    background-color: #404040;
     text-decoration: none;
     color: white;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #2c3e1d;
-    color: white;
-}
-
-.dropdown-content a:hover {
-    background-color: #2c3e1d;
+    background-color: #404040;
     color: white;
 }
 
@@ -468,7 +475,7 @@ a {
 }
 
 .dropdown.expanded .dropbtn {
-    background-color: #2c3e1d;
+    background-color: #404040;
 }
 } 
 

@@ -67,8 +67,7 @@ a {
   color: #fff;
   /*border-bottom: thick solid #e36f3c;*/
   /*background-color: #000;*/
-  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.jpg") no-repeat center, #505050;
-  background-size: cover; }
+  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.jpg") no-repeat left, #505050;}
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -483,7 +482,7 @@ body.hasHover .dropdown:hover .dropdown-content{
     display: block;
     width: 100%;
     text-align: left;
-    /*pointer-events: none;  don't use this when 'on mobile' as it is only for showing menu*/
+    pointer-events: none;  /*don't use this when 'on mobile' as it is only for showing menu*/
   }
 
 /* Show the dropdown menu when the user clicks the mouse over the dropdown button */

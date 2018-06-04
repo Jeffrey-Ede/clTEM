@@ -423,6 +423,7 @@ a {
 }
 
 /* Add a grey background to dropdown links on hover */
+
 .dropdown-content a:hover {
     background-color: #404040;
     color: white;
@@ -478,6 +479,11 @@ a {
 .dropdown.expanded .dropbtn {
     background-color: #404040;
 }
+
+.dropdown .dropbtn {
+    background-color: #6A9D1A;
+}
+
 } 
 
 /* End of topnav */

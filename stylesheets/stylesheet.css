@@ -416,7 +416,7 @@ a {
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
+body.hasHover .topnav a:hover, body.hasHover .dropdown:hover .dropbtn {
     background-color: #404040;
     text-decoration: none;
     color: white;
@@ -424,13 +424,13 @@ a {
 
 /* Add a grey background to dropdown links on hover */
 
-.dropdown-content a:hover {
+body.hasHover .dropdown-content a:hover {
     background-color: #404040;
     color: white;
 }
 
 @media screen and (min-width: 681px) {
-.dropdown:hover .dropdown-content{
+body.hasHover .dropdown:hover .dropdown-content{
     display: block;
 }
 }
@@ -478,10 +478,6 @@ a {
 
 .dropdown.expanded .dropbtn {
     background-color: #404040;
-}
-
-.dropdown .dropbtn {
-    background-color: #6A9D1A;
 }
 
 } 

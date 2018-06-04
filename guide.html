@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>clTEM | Home</title>
+    <title>clTEM | Guide</title>
 
     <script>
       if (!("ontouchstart" in document.documentElement)) {
@@ -44,7 +44,7 @@
     </section>
 <nav>
 <div class="topnav">
-  <a href="index" class="active" onclick="closeMenu()">Home</a>
+  <a href="index" onclick="closeMenu()">Home</a>
 
   <div class="dropdown" onclick="toggleDropdown()">
     <form action="guide"><input class="dropbtn" type="submit" value="Guide" /></form>
@@ -52,13 +52,14 @@
       <a href="input" onclick="closeMenu()">Input</a>
       <a href="config" onclick="closeMenu()">Configuration</a>
       <a href="simulate" onclick="closeMenu()">Simulating</a>
-      <a href="export" onclick="closeMenu()">Export</a>
+      <a href="export" class="active" onclick="closeMenu()">Export</a>
     </div>
   </div>
 
   <a href="compile" onclick="closeMenu()">Compilation</a></li>
 
   <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  <!-- <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><img src="images/navicon.svg" alt="" style="height: 1em; width: 1em;"></a> -->
 
 </div>
 </nav>
@@ -66,61 +67,19 @@
 <section id="centre-content" class="main-content">
 <div id="guts">
 
-<h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Home</h1>
+<h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Guide</h1>
 
-<p style="font-weight: bold;">
-  clTEM is currently in development, many of the final features are present if not fully tested.
-</p>
+  <p>
+    These pages are intended as a general guide to using clTEM. It is currently split into several section:
+  </p>
 
-<p>
-  clTEM is an OpenCL accelerate implementation of the multislice algorithm for simulating transmission electron microscope images. The use of OpenCL means that the code will run on any hardware (AMD, Nvidia and Intel), particularly designed to exploit the power of GPUs. Some example images are shown below.
-</p>
+  <ul>
+    <li><a href="input">Input</a> - Information about in input structure file format</li>
+    <li><a href="config">Configuration</a> - How to save/edit configuration files</li>
+    <li><a href="simulate">Simulating</a> - How to actually perform the simulation</li>
+    <li><a href="export">Export</a> - How to export the simulation data</li>
+  </ul>
 
- <div class="image-figure">
-    <img style="width:300px;" src="images/exp-tem.jpg" alt="TEM simulation">
-    <img style="width:300px;" src="images/exp-cbed.jpg" alt="CBED simulation">
-<p>
-    <span class="figure-title">Figure</span> Conventional TEM (left) and CBED image (right) from a PbTi<sub>0.8</sub>Zr<sub>0.2</sub>O<sub>3</sub>-SrRuO<sub>3</sub> simulated using an Nvidia GeForce GTX 670. The TEM image has simulated noise from a Gatan Orius camera and the CBED image has 10 TDS configurations.
-</p>
-</div> 
-<h2>Features</h2>
-
-<p>
-  The main features of clTEM are
-<ul>
-  <li>Support for TEM, STEM and CBED simulations</li>
-  <li>OpenCL acceleration for quick simulations on various devices</li>
-  <li>Multi-device support - STEM and CBED simulation times can be drastically decreased</li>
-  <li>Thermal diffuse scattering simulation using hte frozen phonon model</li>
-  <li>Simple input files with full occupancy and thermal vibrations defined per atom. See <a href="input">here</a> for more</li>
-  <li>Option to use the classic single slice model or a full 3D approximation</li>
-  <li>Incorporate detective quantum efficiency (DQE) and noise transfer function (NTF) into TEM simulations</li>
-  <li>Use via na intuitive GUI or via command line</li>
-  <li>Compatible with Linux and Windows</li>
-</ul>
-
-</p>
-
- <div class="image-figure">
-    <img style="width:80%;" src="images/cltem-screenshot.jpg" alt="clTEM interface">
-<p>
-    <span class="figure-title">Figure</span> Example screenshot of the clTEM interface running on linux mint 18.3 with the Arc theme.
-</p>
-</div> 
-
-<h2>Background</h2>
-
-<p>
-  Much of the code has been built with the help of Kirkland's excellent book:
-</p>
-
-<blockquote>
-<a href="https://www.springer.com/gb/book/9781441965325">Earl J. Kirkland, <em>Advanced Computing in Electron Microscopy, 2<sup>nd</sup> edition</em> (2010)</a>
-</blockquote>
-
-<p>
-The original code was written by Dr M. Adam Dyson and can be found <a href="https://github.com/ADyson/clTEM">here</a> that was partly written as part of his <a href="http://wrap.warwick.ac.uk/72953/">PhD</a>.
-</p>
 
 </div>
 </section>

@@ -344,15 +344,15 @@ a {
 }
 
 @media screen and (min-width: 64em) {
-  topnav {
+  .topnav {
     padding: 0rem 5rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  topnav {
+  .topnav {
     padding: 0rem 3rem; } }
 
 @media screen and (max-width: 42em) {
-  topnav {
+  .topnav {
     padding: 0rem 0rem; } }
 
 /* Style the links inside the navigation bar */
@@ -467,6 +467,7 @@ a {
     display: block;
     width: 100%;
     text-align: left;
+    pointer-events: none; /* don't use this when 'on mobile' as it is only for showing menu*/
   }
 
 /* Show the dropdown menu when the user clicks the mouse over the dropdown button */

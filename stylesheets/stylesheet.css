@@ -418,6 +418,10 @@ a {
     background-color: #404040;
 }
 
+.dropdown .dropbtn.touched {
+    background-color: #404040;
+}
+
 /* Add a dark background on topnav links and the dropdown button on hover */
 body.hasHover .topnav a:hover, body.hasHover .dropdown:hover .dropbtn {
     background-color: #404040;

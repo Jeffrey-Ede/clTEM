@@ -48,12 +48,12 @@ a {
   .btn {
     padding: 0.55rem 1rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .btn {
     padding: 0.4rem 0.9rem;
     font-size: 0.9rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .btn {
     display: block;
     width: 100%;
@@ -73,11 +73,11 @@ a {
   .page-header {
     padding: 2rem 6rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .page-header {
     padding: 1rem 4rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .page-header {
     padding: 1rem 1rem;} }
 
@@ -85,11 +85,11 @@ a {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 681px) {
   .header-layout {
     display: table-cell;} }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .header-layout {
     display: float;
     width: 100%;
@@ -107,13 +107,13 @@ a {
     height: 12rem;
     } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .project-logo {
     padding: 1rem 1rem;
     width: 9rem;
     height: 9rem;} }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .project-logo {
     padding: 0rem 0rem;
     width: 6rem;
@@ -131,11 +131,11 @@ a {
   .project-name {
     font-size: 3.25rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .project-name {
     font-size: 2.25rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .project-name {
     font-size: 1.75rem;
     text-align: center;
@@ -154,11 +154,11 @@ a {
   .project-tagline {
     font-size: 1.25rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .project-tagline {
     font-size: 1.15rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .project-tagline {
     font-size: 1rem;
     text-align: center;
@@ -270,12 +270,12 @@ a {
     margin: 0 auto;
     font-size: 1.1rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .main-content {
     padding: 2rem 4rem;
     font-size: 1.1rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem; } }
@@ -300,12 +300,12 @@ a {
     font-size: 1rem;
     padding: 2rem 6rem;} }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .site-footer {
     font-size: 1rem;
     padding: 1rem 4rem;} }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .site-footer {
     font-size: 0.9rem;
     padding: 2rem 1rem;} }
@@ -326,11 +326,11 @@ a {
   .figure {
     width: 70%; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .figure {
     width: 80%; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .figure {
     width: 90%; } }
 
@@ -346,11 +346,11 @@ a {
   .topnav {
     padding: 0rem 5rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 681px) and (max-width: 64em) {
   .topnav {
     padding: 0rem 3rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 680px) {
   .topnav {
     padding: 0rem 0rem; } }
 
@@ -486,7 +486,7 @@ body.hasHover .dropdown:hover .dropdown-content{
     display: block;
     width: 100%;
     text-align: left;
-    pointer-events: none;  /*don't use this when 'on mobile' as it is only for showing menu*/
+    /*pointer-events: none;  don't use this when 'on mobile' as it is only for showing menu*/
   }
 
 /* Show the dropdown menu when the user clicks the mouse over the dropdown button */

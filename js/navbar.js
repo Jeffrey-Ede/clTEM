@@ -54,8 +54,8 @@ function colorTaps() {
       var a = ac[i].getElementsByTagName('a');
       for (var j = 0; j < a.length; j++) {
 
-        a[j].onmousedown = function(){this.classList.toggle("touched", true);} // on tapping
-        a[j].onmouseup = function(){this.classList.toggle("touched", false);} // on releasing
+        a[j].ontouchstart = function(){this.classList.toggle("touched", true);} // on tapping
+        a[j].ontouchend = function(){this.classList.toggle("touched", false);} // on releasing
 
       }
     }

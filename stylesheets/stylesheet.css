@@ -496,6 +496,10 @@ body.hasHover .dropdown:hover .dropdown-content{
 
 } 
 
+.topnav a.touched {
+    background-color: #404040;
+}
+
 /* End of topnav */
 
  /* Image containers */

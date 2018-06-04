@@ -43,6 +43,21 @@ function watchForHover() {
     document.addEventListener('mousemove', enableHover, true);
 
     enableHover();
+
+
 }
 
+
+function colorTaps() {
+     var ac = document.getElementsByClassName('topnav')
+    for (var i = 0; i < ac.length; i++) {
+      var a = ac[i].getElementsByTagName('a');
+      for (var j = 0; j < a.length; j++) {
+
+        a[j].onmousedown = function(){this.classList.toggle("touched", true);} // on tapping
+        a[j].onmouseup = function(){this.classList.toggle("touched", false);} // on releasing
+
+      }
+    }
+}
 // watchForHover();

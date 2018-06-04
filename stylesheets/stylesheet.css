@@ -354,6 +354,10 @@ a {
   .topnav {
     padding: 0rem 0rem; } }
 
+.topnav a.touched {
+    background-color: #404040;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
@@ -412,14 +416,6 @@ a {
     text-decoration: none;
     display: block;
     text-align: left;
-}
-
-.topnav a.touched {
-    background-color: #404040;
-}
-
-.dropdown .dropbtn.touched {
-    background-color: #404040;
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */

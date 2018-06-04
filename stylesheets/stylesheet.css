@@ -429,6 +429,11 @@ body.hasHover .dropdown-content a:hover {
     color: white;
 }
 
+.dropdown .dropbtn {
+    display: block;
+    float: none;
+  }
+
 @media screen and (min-width: 681px) {
 body.hasHover .dropdown:hover .dropdown-content{
     display: block;

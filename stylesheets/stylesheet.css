@@ -65,9 +65,9 @@ a {
 
 .page-header {
   color: #fff;
-  /*border-bottom: thick solid #e36f3c;*/
-  /*background-color: #000;*/
-  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.jpg") no-repeat left, #505050;}
+  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/exp-tem.jpg") no-repeat left, #505050;
+  background-size: cover;
+}
 
 @media screen and (min-width: 64em) {
   .page-header {

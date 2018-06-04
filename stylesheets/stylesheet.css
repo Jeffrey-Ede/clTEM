@@ -446,6 +446,7 @@ body.hasHover .dropdown:hover .dropdown-content{
   .topnav a.icon {
     float: right;
     display: block;
+    background-color: #6A9D1A;
   }
 }
 
@@ -454,6 +455,7 @@ body.hasHover .dropdown:hover .dropdown-content{
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
+    background-color: #404040;
     right: 0;
     top: 0;
   }

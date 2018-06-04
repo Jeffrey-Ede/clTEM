@@ -54,8 +54,8 @@ function colorTaps() {
       var a = ac[i].getElementsByTagName('a');
       for (var j = 0; j < a.length; j++) {
 
-        a[j].ontouchstart = function(){this.classList.toggle("touched", true);} // on tapping
-        a[j].ontouchend = function(){this.classList.toggle("touched", false);} // on releasing
+        a[j].onpointerdown = function(){this.classList.toggle("touched", true);} // on tapping
+        a[j].onpointerup = function(){this.classList.toggle("touched", false);} // on releasing
         a[j].ontouchmove = function(){this.classList.toggle("touched", false);} // on moving (i.e. we arent pressing)
 
       }

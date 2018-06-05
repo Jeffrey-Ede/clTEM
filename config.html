@@ -54,6 +54,7 @@
     <a class="dropbtn" href="guide">Guide</a>
     <div class="dropdown-content">
       <a href="input" onclick="closeMenu()">Input</a>
+      <a href="opencl" onclick="closeMenu()">OpenCL</a>
       <a href="config" class="active" onclick="closeMenu()">Configuration</a>
       <a href="simulate" onclick="closeMenu()">Simulating</a>
       <a href="export" onclick="closeMenu()">Export</a>
@@ -81,12 +82,41 @@
   <b>Note</b> the configuration file has entries for units. These are purely descriptive, and do not define how clTEM will read in the values (i.e. if you change Å to nm, the value will still be read in Å).
 </p>
 
+<h2>General settings</h2>
+<p>
+
+The general simulation settings dialog can be found under the <code>Simulation &rarr; General</code> menu. There are only a few options here, but they can impact the simulations significantly. Firstly, the option to choose the <code>Potentials</code> used in the simulation is placed here (<b>Not yet supported</b>), the default being Kirkland's potentials from his book.<sup><a href="https://www.springer.com/gb/book/9781441965325">1</a></sup> 
+</p>
+<p>Next is the <code>Full 3D integrals</code> setting. This is only used when the simulation is using the Full 3D method and it dictates how many sub-slices are used to approximate the 3D nature of a single slice. Higher values give a better approximation, but also take longer to simulate.
+</p>
+<p>
+Finally is an option to set the STEM <code>Parallel pixels</code>. This option enables you to speed up STEM simulations by propagating multiple beam positions through the sample at once. This can greatly speed up simulations due to the need to calculate the potentials only once, but also has several caveats.
+<ol>
+<li>TDS simulations will be less accurate. Due to the fact that multiple beam positions are propagated at once, the thermal vibrations approximation will not be as valid. If the parallel pixels are a significant fraction of the total STEM pixels, the TDS simulation will not be valid. The parallel pixels themselves are chosen at random (i.e. not all next to each other) to try and reduce this effect.</li>
+<li>Increasing this value can crash the program or even your computer if it is set too high. Increasing this value consumes more memory on the selected device and is possible to increase it too much. You will need to find out what value is acceptable on your hardware</li>
+  </ol>
+</p>
+
+   <div class="image-figure">
+    <img style="width:300px;" src="images/general-dialog.png" alt="General dialog">
+  <p>
+      <span class="figure-title">Figure</span> General settings dialog.
+  </p>
+  </div> 
+
+<h2>Simulation Area</h2>
+<p>
+
+Area...
+
+</p>
+
 <h2>Default settings</h2>
 <p>
 
 clTEM supports user defined default configurations. In the install directory there should be a <code>microscopes</code> folder (create it if it doesn't exist). Inside you can save a <code>default.json</code> that will be loaded by default. This is useful for defining default microscope parameters, such as STEM detectors, so you don't have to define them every time.
 
-  </p>
+</p>
 
 </div>
 </section>

@@ -75,7 +75,17 @@
 <h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compiling</h1>
 
 <p>
-  This page has no content yet...
+  clTEM has been compiled and tested on windows using <a href="https://mingw-w64.org/doku.php">Mingw-w64</a> and on linux using g++. <a href="https://cmake.org/">CMake</a> is used to create the build files. The dependencies are listed below
+
+  <ul>
+      <li><a href="https://www.khronos.org/opencl/">OpenCL</a> - parallel programming language</li>
+      <li><a href="https://github.com/clMathLibraries/clFFT">clFFT</a> - OpenCL accelerated FFTs </li>
+      <li><a href="http://www.qt.io/">Qt5</a> - GUI</li>
+      <li><a href="http://qcustomplot.com/">QCustomPlot</a> - plotting</li>
+      <li><a href="https://www.boost.org/">Boost</a> - additional C++ libraries (used for backwards compatibility of the OpenCL wrapper)</li>
+      <li><a href="http://simplesystems.org/libtiff/">LibTIFF</a> - TIFF input/output</li>
+      <li><a href="https://github.com/nlohmann/json">JSON for Modern C++</a> - JSON file creation/parsing</li>
+  </ul>
 </p>
 
 

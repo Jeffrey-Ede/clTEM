@@ -107,7 +107,40 @@ Finally is an option to set the STEM <code>Parallel pixels</code>. This option e
 <h2>Simulation Area</h2>
 <p>
 
-Area...
+Opening the area dialog through the <code>Simulation &rarr; Area</code> menu or the <code>Set area</code> buttons allows you to set the area to be simulated. The areas behave differently for each mode. At the bottom of the dialog, all the relevant scales and areas are shown.
+
+<h3>TEM</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="images/area-ctem.png" alt="TEM area">
+<p>
+    <span class="figure-title">Figure</span> The area options for the conventional TEM simulations. Note that the same range is applied to both x and y directions. 
+</p>
+</div> 
+<p>
+In TEM, the area is set very simply, defined by a start and finish position, but with a few caveats. Because the simulation relies on square FFTs, the simulation width and height must be the same. Also, when padding is added to the image, the amount of padding is adjusted to be an integer number of pixels, which will affect the pixel scale.
+</p>
+
+<h3>CBED</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="images/area-cbed.png" alt="CBED area">
+<p>
+    <span class="figure-title">Figure</span> The area options for the CBED simulations, note the extra padding option.
+</p>
+</div> 
+<p>
+CBED simulation are only defined by the position of the probe. The padding is automatically added, though an extra padding option is available to adjust the scale in reciprocal space. For example, a CBED disc may only have a radius of 10 mrad, but the simulation scale may only achieve 5 mrad per pixel. This will create a lot of error in simulation the disc (i.e. try drawing a disc in a 4×4 pixel image). In this case, the padding can be increased so that the pixel resolution is smaller and a more accurate disc can be formed.
+</p>
+
+<h3>STEM</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="images/area-stem.png" alt="STEM area">
+<p>
+    <span class="figure-title">Figure</span> The area options for the STEM simulations, the extra padding option behaves the same as in CBED.
+</p>
+</div> 
+<p>
+In STEM mode, the scan parameters are defined very simply as a start/finish position as well as the number of pixels. This image is not directly affected by the simulation resolution (as opposed to the scan resolution), so can be any size you wish. The simulation resolution does affect the reciprocal resolution achieved, for example, for annular dark field simulations, a higher resolution may be needed to achieve the large collection angles. Equally, the simulation resolution is affected by the range of the scan. A padding option is provided, for the same reason as CBED.
+</p>
 
 </p>
 

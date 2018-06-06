@@ -65,8 +65,7 @@ a {
 
 .page-header {
   color: #fff;
-  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.jpg") no-repeat left, #505050;
-  background-size: cover;
+  background: linear-gradient(130deg, #00000022, #000000CC), url("../images/texture.png") repeat left, #505050;
 }
 
 @media screen and (min-width: 64em) {

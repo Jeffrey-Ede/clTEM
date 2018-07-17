@@ -89,6 +89,12 @@ The general simulation settings dialog can be found under the <code>Simulation &
 </p>
 <p>Next is the <code>Full 3D integrals</code> setting. This is only used when the simulation is using the Full 3D method and it dictates how many sub-slices are used to approximate the 3D nature of a single slice. Higher values give a better approximation, but also take longer to simulate.
 </p>
+<div class="image-figure">
+    <img style="width:500px;" src="images/multistem-demo.png" alt="General dialog">
+  <p>
+      <span class="figure-title">Figure</span> Example of a STEM image being formed from individual simulations of parallel pixels that are summed to form a complete image.
+  </p>
+  </div> 
 <p>
 Finally is an option to set the STEM <code>Parallel pixels</code>. This option enables you to speed up STEM simulations by propagating multiple beam positions through the sample at once. This can greatly speed up simulations due to the need to calculate the potentials only once, but also has several caveats.
 <ol>

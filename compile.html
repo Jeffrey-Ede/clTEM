@@ -1,109 +1,144 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>clTEM | Compilation</title>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Compiling | clTEM</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Compiling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/compile.html" />
+<meta property="og:url" content="http://localhost:4000/compile.html" />
+<meta property="og:site_name" content="clTEM" />
+<script type="application/ld+json">
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/compile.html","headline":"Compiling","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-    <script>
-      if (!("ontouchstart" in document.documentElement)) {
-      document.documentElement.className += " no-touch";
-      }
-    </script>
+        <meta name="theme-color" content="#6A9D1A">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="/assets/css/style.css">
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-    <!-- <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script> -->
-    <!-- <script type='text/javascript' src='js/dynamicpage.js'></script> -->
+        <!-- no clue what I am doing here... -->
+        <script>
+                if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += " no-touch";
+                }
+        </script>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        <script src="/assets/js/navbar.js"></script>
 
-    <script src="js/navbar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-  </head>
+      </head>
   <body style="overflow-y: scroll;">
 
     <script type="text/javascript">
             watchForHover();
     </script>
 
-<div id="page-wrap">
+        <div id="page-wrap">
 
-    <section class="page-header">
+                <section class="page-header">
 
-    <div class="header-layout" style="text-align: center;">
-      <img src="images/logo.svg" class="project-logo">
-    </div>
-
-    <div class="header-layout">
-      <h1 class="project-name">clTEM</h1><br/>
-      <h2 class="project-tagline">OpenCL accelerated multislice</h2>
-    </div>
-
-    <a href="https://github.com/JJPPeters/clTEM" class="btn">Source</a>
-    <a href="https://github.com/JJPPeters/clTEM/releases/download/v0.2a/Install_clTEM_0.2a.exe" class="btn">v0.2a installer (Win x64)</a>
-    </section>
+                        <div class="header-layout" style="text-align: center;">
+                          <img src="/assets/logo.svg" class="project-logo">
+                        </div>
+                    
+                        <div class="header-layout">
+                          <h1 class="project-name">clTEM</h1><br/>
+                          <h2 class="project-tagline">OpenCL accelerated multislice</h2>
+                        </div>
+                    
+                        <a href="https://github.com/JJPPeters/clTEM" class="btn">Source</a>
+                        <a href="https://github.com/JJPPeters/clTEM/releases/download/v0.2a/Install_clTEM_0.2a.exe" class="btn">v0.2a installer (Win x64)</a>
+                        </section>
 <nav>
 <div class="topnav">
-  <a href="index" onclick="closeMenu()">Home</a>
 
-  <div class="dropdown" onclick="toggleDropdown()">
-    <a class="dropbtn" href="guide">Guide</a>
-    <div class="dropdown-content">
-      <a href="input" onclick="closeMenu()">Input</a>
-      <a href="opencl" onclick="closeMenu()">OpenCL</a>
-      <a href="config" onclick="closeMenu()">Configuration</a>
-      <a href="simulate" onclick="closeMenu()">Simulating</a>
-      <a href="export" onclick="closeMenu()">Export</a>
-    </div>
-  </div>
+        <!-- this menu generation stuff is from  https://gist.github.com/pdarragh/c7ca120604c1a1d8b8de -->
 
-  <a href="compile" class="active" onclick="closeMenu()">Compilation</a></li>
+        
+        
+        
+        <a href="/" onclick="closeMenu()">Home</a>
+        
+
+        
+        
+        
+
+        <div class="dropdown" onclick="toggleDropdown()">
+                <a class="dropbtn" href="/guide">Guide</a>
+                <div class="dropdown-content">
+                
+                <a href="/guide/input" onclick="closeMenu()">Input</a>
+                
+                <a href="/guide/opencl" onclick="closeMenu()">OpenCL</a>
+                
+                <a href="/guide/config" onclick="closeMenu()">Configuration</a>
+                
+                <a href="/guide/simulate" onclick="closeMenu()">Simulating</a>
+                
+                <a href="/guide/export" onclick="closeMenu()">Export</a>
+                
+            </div>
+        </div>
+        
+
+        
+        
+        
+        <a href="/compile" onclick="closeMenu()">Compiling</a>
+        
+
+        
 
   <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-  <!-- <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><img src="images/navicon.svg" alt="" style="height: 1em; width: 1em;"></a> -->
 
 </div>
 </nav>
 
-<section id="centre-content" class="main-content">
-<div id="guts">
-
-<h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compiling</h1>
-
-<p>
-  clTEM has been compiled and tested on windows using <a href="https://mingw-w64.org/doku.php">Mingw-w64</a> and on linux using g++. <a href="https://cmake.org/">CMake</a> is used to create the build files. The dependencies are listed below
-
-  <ul>
-      <li><a href="https://www.khronos.org/opencl/">OpenCL</a> - parallel programming language</li>
-      <li><a href="https://github.com/clMathLibraries/clFFT">clFFT</a> - OpenCL accelerated FFTs </li>
-      <li><a href="http://www.qt.io/">Qt5</a> - GUI</li>
-      <li><a href="http://qcustomplot.com/">QCustomPlot</a> - plotting</li>
-      <li><a href="https://www.boost.org/">Boost</a> - additional C++ libraries (used for backwards compatibility of the OpenCL wrapper)</li>
-      <li><a href="http://simplesystems.org/libtiff/">LibTIFF</a> - TIFF input/output</li>
-      <li><a href="https://github.com/nlohmann/json">JSON for Modern C++</a> - JSON file creation/parsing</li>
-  </ul>
-</p>
-
-
-</div>
-</section>
-
-  <footer class="site-footer">
-    <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
-
-    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a> and modified by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
-  </footer>
-
-
 </div>
 
-    <script type="text/javascript">
-      watchForResize()
-      colorTaps()
-    </script>
+<main id="centre-content" class="main-content" role="main">
+
+     <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Compiling</h1>
+  </header>
+
+  <div class="post-content">
+    <p>clTEM has been compiled and tested on windows using <a href="https://mingw-w64.org/doku.php">Mingw-w64</a> and on linux using g++. <a href="https://cmake.org/">CMake</a> is used to create the build files. The dependencies are listed below</p>
+
+<ul>
+  <li><a href="https://www.khronos.org/opencl/">OpenCL</a> - parallel programming language</li>
+  <li><a href="https://github.com/clMathLibraries/clFFT">clFFT</a> - OpenCL accelerated FFTs</li>
+  <li><a href="http://www.qt.io/">Qt5</a> - GUI</li>
+  <li><a href="http://qcustomplot.com/">QCustomPlot</a> - plotting</li>
+  <li><a href="https://www.boost.org/">Boost</a> - additional C++ libraries <a href="used for backwards compatibility of the OpenCL wrapper"></a></li>
+  <li><a href="http://simplesystems.org/libtiff/">LibTIFF</a> - TIFF input/output</li>
+  <li><a href="https://github.com/nlohmann/json">JSON for Modern C++</a> - JSON file creation/parsing</li>
+</ul>
+
+  </div>
+
+</article>
+
+
+</main>
+
+<footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+    
+        <span class="site-footer-credits">This page was is based off the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a> and modified by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+      </footer>
+
+     <script type="text/javascript">
+        watchForResize()
+        colorTaps()
+      </script>
   </body>
 </html>

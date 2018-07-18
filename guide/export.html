@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Guide | clTEM</title>
+<title>Export | clTEM</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Guide" />
+<meta property="og:title" content="Export" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/guide.html" />
-<meta property="og:url" content="http://localhost:4000/guide.html" />
+<link rel="canonical" href="http://localhost:4000/guide/export.html" />
+<meta property="og:url" content="http://localhost:4000/guide/export.html" />
 <meta property="og:site_name" content="clTEM" />
 <script type="application/ld+json">
-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide.html","headline":"Guide","@context":"http://schema.org"}</script>
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide/export.html","headline":"Export","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="theme-color" content="#6A9D1A">
@@ -107,19 +107,13 @@
      <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Guide</h1>
+    <h1 class="post-title">Export</h1>
   </header>
 
   <div class="post-content">
-    <p>This guide is intended as a general introduction to using clTEM. It is currently split into several sections:</p>
+    <p>After a simulation has been completed, the data can be exported to file by right clicking on the image and selecting <code class="highlighter-rouge">Export</code> and then one of <code class="highlighter-rouge">RGB</code> or <code class="highlighter-rouge">Data</code>. Selecting <code class="highlighter-rouge">RGB</code> will let you save a .bmp image that is easily opened in any image viewer/editor, but the data will be scaled 8-bit (i.e. it will be integer values in the range 0-255). Selecting <code class="highlighter-rouge">Data</code> will let you save a full 32-bit floating point .tif file. This file will not open in many image viewers/editors but contains the full accuracy of the simulation. These images can however be opened in programs such as ImageJ and the Gatan Microscopy Suite.</p>
 
-<ul>
-  <li><a href="/guide/input">Input</a> - Details of the input structure file format</li>
-  <li><a href="/guide/opencl">OpenCL</a> - How the OpenCL device is set</li>
-  <li><a href="/guide/config">Configuration</a> - How to save/edit configuration files</li>
-  <li><a href="/guide/simulate">Simulating</a> - How to actually perform the simulation</li>
-  <li><a href="/guide/export">Export</a> - How to export the simulation data</li>
-</ul>
+<p>Whenever you save an image, a partnet .json file will be created containing all of the relevant parameters used in the simulation.</p>
 
   </div>
 

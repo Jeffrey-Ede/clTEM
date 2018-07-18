@@ -1,150 +1,165 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>clTEM | Home</title>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Home | clTEM</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="clTEM" />
+<script type="application/ld+json">
+{"name":"clTEM","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/","headline":"Home","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-    <script>
-      if (!("ontouchstart" in document.documentElement)) {
-      document.documentElement.className += " no-touch";
-      }
-    </script>
+        <meta name="theme-color" content="#6A9D1A">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="/assets/css/style.css">
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-    <!-- <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script> -->
-    <!-- <script type='text/javascript' src='js/dynamicpage.js'></script> -->
+        <!-- no clue what I am doing here... -->
+        <script>
+                if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += " no-touch";
+                }
+        </script>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        <script src="/assets/js/navbar.js"></script>
 
-    <script src="js/navbar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-
-  </head>
+      </head>
   <body style="overflow-y: scroll;">
 
     <script type="text/javascript">
             watchForHover();
     </script>
 
-<div id="page-wrap">
+        <div id="page-wrap">
 
-    <section class="page-header">
+                <section class="page-header">
 
-    <div class="header-layout" style="text-align: center;">
-      <img src="images/logo.svg" class="project-logo">
-    </div>
-
-    <div class="header-layout">
-      <h1 class="project-name">clTEM</h1><br/>
-      <h2 class="project-tagline">OpenCL accelerated multislice</h2>
-    </div>
-
-    <a href="https://github.com/JJPPeters/clTEM" class="btn">Source</a>
-    <a href="https://github.com/JJPPeters/clTEM/releases/download/v0.2a/Install_clTEM_0.2a.exe" class="btn">v0.2a installer (Win x64)</a>
-    </section>
+                        <div class="header-layout" style="text-align: center;">
+                          <img src="/assets/logo.svg" class="project-logo">
+                        </div>
+                    
+                        <div class="header-layout">
+                          <h1 class="project-name">clTEM</h1><br/>
+                          <h2 class="project-tagline">OpenCL accelerated multislice</h2>
+                        </div>
+                    
+                        <a href="https://github.com/JJPPeters/clTEM" class="btn">Source</a>
+                        <a href="https://github.com/JJPPeters/clTEM/releases/download/v0.2a/Install_clTEM_0.2a.exe" class="btn">v0.2a installer (Win x64)</a>
+                        </section>
 <nav>
 <div class="topnav">
-  <a href="index" class="active" onclick="closeMenu()">Home</a>
 
-  <div class="dropdown" onclick="toggleDropdown()">
-    <a class="dropbtn" href="guide">Guide</a>
-    <div class="dropdown-content">
-      <a href="input" onclick="closeMenu()">Input</a>
-      <a href="opencl" onclick="closeMenu()">OpenCL</a>
-      <a href="config" onclick="closeMenu()">Configuration</a>
-      <a href="simulate" onclick="closeMenu()">Simulating</a>
-      <a href="export" onclick="closeMenu()">Export</a>
-    </div>
-  </div>
+        <!-- this menu generation stuff is from  https://gist.github.com/pdarragh/c7ca120604c1a1d8b8de -->
 
-  <a href="compile" onclick="closeMenu()">Compilation</a></li>
+        
+        
+        
+        <a href="/" onclick="closeMenu()">Home</a>
+        
+
+        
+        
+        
+
+        <div class="dropdown" onclick="toggleDropdown()">
+                <a class="dropbtn" href="/guide">Guide</a>
+                <div class="dropdown-content">
+                
+                <a href="/guide/input" onclick="closeMenu()">Input</a>
+                
+                <a href="/guide/opencl" onclick="closeMenu()">OpenCL</a>
+                
+                <a href="/guide/config" onclick="closeMenu()">Configuration</a>
+                
+                <a href="/guide/simulate" onclick="closeMenu()">Simulating</a>
+                
+                <a href="/guide/export" onclick="closeMenu()">Export</a>
+                
+            </div>
+        </div>
+        
+
+        
+        
+        
+        <a href="/compile" onclick="closeMenu()">Compiling</a>
+        
+
+        
 
   <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
 
 </div>
 </nav>
 
-<section id="centre-content" class="main-content">
-<div id="guts">
+</div>
 
-<h1><a id="about" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Home</h1>
+<main id="centre-content" class="main-content" role="main">
 
-<p style="font-weight: bold;">
-  clTEM is currently in development, many of the final features are present if not fully tested. Please report any bugs <a href="https://github.com/JJPPeters/clTEM/issues">here</a>
-</p>
+     <div class="home"><h1 class="page-heading">Home</h1><p><strong>clTEM is currently in development, many of the final features are present if not fully tested. Please report any bugs <a href="https://github.com/JJPPeters/clTEM/issues">here</a>.</strong></p>
 
-<p>
-  clTEM is an OpenCL accelerate implementation of the multislice algorithm for simulating transmission electron microscope images. The use of OpenCL means that the code will run on any hardware (AMD, Nvidia and Intel), particularly designed to exploit the power of GPUs. Some example images are shown below.
-</p>
+<p>clTEM is an OpenCL accelerate implementation of the multislice algorithm for simulating transmission electron microscope images. The use of OpenCL means that the code will run on any hardware (AMD, Nvidia and Intel), particularly designed to exploit the power of GPUs. Some example images are shown below.</p>
 
- <div class="image-figure">
-    <img style="width:300px;" src="images/exp-tem.jpg" alt="TEM simulation">
-    <img style="width:300px;" src="images/exp-cbed.jpg" alt="CBED simulation">
-<p>
-    <span class="figure-title">Figure</span> Conventional TEM and CBED image from a PbTi<sub>0.8</sub>Zr<sub>0.2</sub>O<sub>3</sub>-SrRuO<sub>3</sub> simulated using an Nvidia GeForce GTX 670. The TEM image has simulated noise from a Gatan Orius camera and the CBED image has 10 TDS configurations.
-</p>
-</div> 
-<h2>Features</h2>
+<div class="image-figure">
+    <img style="width:300px;" src="/assets/images/exp-tem.jpg" alt="TEM simulation" />
+    <img style="width:300px;" src="/assets/images/exp-cbed.jpg" alt="CBED simulation" />
+    <p>
+        <span class="figure-title">Figure</span> Conventional TEM and CBED image from a PbTi<sub>0.8</sub>Zr<sub>0.2</sub>O<sub>3</sub>-SrRuO<sub>3</sub> simulated using an Nvidia GeForce GTX 670. The TEM image has simulated noise from a Gatan Orius camera and the CBED image has 10 TDS configurations.
+    </p>
+</div>
 
-<p>
-  The main features of clTEM are
+<h2 id="features">Features</h2>
+
+<p>The main features of clTEM are</p>
+
 <ul>
   <li>Support for TEM, STEM and CBED simulations</li>
   <li>OpenCL acceleration for quick simulations on various devices</li>
   <li>Multi-device support - STEM and CBED simulation times can be drastically decreased</li>
   <li>Thermal diffuse scattering simulation using hte frozen phonon model</li>
-  <li>Simple input files with full occupancy and thermal vibrations defined per atom. See <a href="input">here</a> for more</li>
+  <li>Simple input files with full occupancy and thermal vibrations defined per atom. See <a href="/guide/input">here</a> for more</li>
   <li>Option to use the classic single slice model or a full 3D approximation</li>
   <li>Incorporate detective quantum efficiency (DQE) and noise transfer function (NTF) into TEM simulations</li>
   <li>Use via na intuitive GUI or via command line</li>
   <li>Compatible with Linux and Windows</li>
 </ul>
 
-</p>
+<div class="image-figure">
+    <img style="width:80%;" src="/assets/images/cltem-screenshot.jpg" alt="clTEM interface" />
+    <p>
+        <span class="figure-title">Figure</span> Example screenshot of the clTEM interface running on linux mint 18.3 with the Arc theme.
+    </p>
+</div>
 
- <div class="image-figure">
-    <img style="width:80%;" src="images/cltem-screenshot.jpg" alt="clTEM interface">
-<p>
-    <span class="figure-title">Figure</span> Example screenshot of the clTEM interface running on linux mint 18.3 with the Arc theme.
-</p>
-</div> 
+<h3 id="background">Background</h3>
 
-<h2>Background</h2>
-
-<p>
-  Much of the code has been built with the help of Kirkland's excellent book:
-</p>
+<p>The original code was written by Dr M. Adam Dyson and can be found <a href="https://github.com/ADyson/clTEM">here</a>. This code was partly written as part of his <a href="http://wrap.warwick.ac.uk/72953/">PhD</a>. Much of the code has been written with the help of Kirkland’s excellent book:</p>
 
 <blockquote>
-<a href="https://www.springer.com/gb/book/9781441965325">Earl J. Kirkland, <em>Advanced Computing in Electron Microscopy, 2<sup>nd</sup> edition</em> (2010)</a>
+  <p><a href="https://doi.org/10.1007/978-1-4419-6533-2">Earl J. Kirkland, <em>Advanced Computing in Electron Microscopy</em>, 2nd edition (2010)</a></p>
 </blockquote>
-
-<p>
-The original code was written by Dr M. Adam Dyson and can be found <a href="https://github.com/ADyson/clTEM">here</a> that was partly written as part of his <a href="http://wrap.warwick.ac.uk/72953/">PhD</a>.
-</p>
-
-</div>
-</section>
-
-  <footer class="site-footer">
-    <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
-
-    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a> and modified by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
-  </footer>
-
-
 </div>
 
 
-    <script type="text/javascript">
-      watchForResize()
-      colorTaps()
-    </script>
+</main>
 
+<footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+    
+        <span class="site-footer-credits">This page was is based off the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a> and modified by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+      </footer>
+
+     <script type="text/javascript">
+        watchForResize()
+        colorTaps()
+      </script>
   </body>
 </html>

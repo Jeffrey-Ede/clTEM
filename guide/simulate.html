@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Guide | clTEM</title>
+<title>Simulating | clTEM</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Guide" />
+<meta property="og:title" content="Simulating" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/guide.html" />
-<meta property="og:url" content="http://localhost:4000/guide.html" />
+<link rel="canonical" href="http://localhost:4000/guide/simulate.html" />
+<meta property="og:url" content="http://localhost:4000/guide/simulate.html" />
 <meta property="og:site_name" content="clTEM" />
 <script type="application/ld+json">
-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide.html","headline":"Guide","@context":"http://schema.org"}</script>
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide/simulate.html","headline":"Simulating","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="theme-color" content="#6A9D1A">
@@ -107,19 +107,15 @@
      <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Guide</h1>
+    <h1 class="post-title">Simulating</h1>
   </header>
 
   <div class="post-content">
-    <p>This guide is intended as a general introduction to using clTEM. It is currently split into several sections:</p>
+    <p>Simulating is as easy as setting up the configuration as you need (or load a configuration file) and pressing the <code class="highlighter-rouge">Sim</code> button on the top-right, or by clicking the <code>Simulation &rarr; Simulate</code> menu entry. A warning dialog will appear if some critical parameter has not been set (i.e. if a structure hasn’t been loaded).</p>
 
-<ul>
-  <li><a href="/guide/input">Input</a> - Details of the input structure file format</li>
-  <li><a href="/guide/opencl">OpenCL</a> - How the OpenCL device is set</li>
-  <li><a href="/guide/config">Configuration</a> - How to save/edit configuration files</li>
-  <li><a href="/guide/simulate">Simulating</a> - How to actually perform the simulation</li>
-  <li><a href="/guide/export">Export</a> - How to export the simulation data</li>
-</ul>
+<p>During the simulation, the progress will be shown via the progress bars in the bottom-right. The botom bar shows the total simulation progress and the top bar shows the progress per simulation part (i.e. if doing STEM, it will show the progress for the current pixel). If multiple devices are being used, this top bar will behave erratically as all devices will try to update this with their own progress.</p>
+
+<p>When a simulation is complete, the results will be shown in the appropriate tab. You can scroll to zoom, click and drag to move and right click to get a menu option to reset the image position. For the exit wave image, there is a combo box underneath to select how the complex image is displayed.</p>
 
   </div>
 

@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Guide | clTEM</title>
+<title>Input | clTEM</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Guide" />
+<meta property="og:title" content="Input" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/guide.html" />
-<meta property="og:url" content="http://localhost:4000/guide.html" />
+<link rel="canonical" href="http://localhost:4000/guide/input.html" />
+<meta property="og:url" content="http://localhost:4000/guide/input.html" />
 <meta property="og:site_name" content="clTEM" />
 <script type="application/ld+json">
-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide.html","headline":"Guide","@context":"http://schema.org"}</script>
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide/input.html","headline":"Input","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="theme-color" content="#6A9D1A">
@@ -107,19 +107,51 @@
      <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Guide</h1>
+    <h1 class="post-title">Input</h1>
   </header>
 
   <div class="post-content">
-    <p>This guide is intended as a general introduction to using clTEM. It is currently split into several sections:</p>
+    <p>Currently, the only supported file format are .xyz files. However, some modification are supported so that occupancy and thermal parameters can be supported.</p>
+
+<h2 id="basic-xyz-files">Basic .xyz files</h2>
+
+<p>At it’s simplest, the .xyz file has 3 main sections:</p>
 
 <ul>
-  <li><a href="/guide/input">Input</a> - Details of the input structure file format</li>
-  <li><a href="/guide/opencl">OpenCL</a> - How the OpenCL device is set</li>
-  <li><a href="/guide/config">Configuration</a> - How to save/edit configuration files</li>
-  <li><a href="/guide/simulate">Simulating</a> - How to actually perform the simulation</li>
-  <li><a href="/guide/export">Export</a> - How to export the simulation data</li>
+  <li>the number of atoms in the structure</li>
+  <li>comment section</li>
+  <li>the atoms and their coordinates</li>
 </ul>
+
+<p>The first line contains the number of atoms and the second line is reserved for comments. Every line after that represents an atom, in the form: <code class="highlighter-rouge">A x y z</code>, where <code class="highlighter-rouge">A</code> is the element symbol and <code class="highlighter-rouge">x</code>, <code class="highlighter-rouge">y</code>, <code class="highlighter-rouge">z</code> are the cartesian coordinates in Å. If you want to use the coordinates in nm, then include the term <code class="highlighter-rouge">nm</code> anywhere in the comments line (with whitespace either side). The use of nm then applied to all relevant units in the file (such as thermal vibrations).</p>
+
+<h2 id="extra-information">Extra information</h2>
+
+<p>To add any more information, clTEM will look at the comments section as a sort of header section for the columns. This has defaults and multiple options to try and easily support as much as possible. They keywords that are looked for are <code class="highlighter-rouge">A</code>, <code class="highlighter-rouge">x</code>, <code class="highlighter-rouge">y</code>, <code class="highlighter-rouge">z</code>, <code class="highlighter-rouge">occ</code>, <code class="highlighter-rouge">u</code>, <code class="highlighter-rouge">ux</code>, <code class="highlighter-rouge">uy</code> and <code class="highlighter-rouge">uz</code>. Any other terms will be ignored, so comments can be added (just make sure they don’t contain any of these terms separated by spaces).</p>
+
+<p><code class="highlighter-rouge">A</code>, <code class="highlighter-rouge">x</code>, <code class="highlighter-rouge">y</code>, <code class="highlighter-rouge">z</code> do not need to be stated, if none of them are found, it is assumed that they form columns 1-4 in the order shown. Other terms are then treated as columns 5 onwards, in the order they are written in the comments section.</p>
+
+<h3 id="occupancy">Occupancy</h3>
+
+<p>Many structures require occupancies for the same sites. If the column <code class="highlighter-rouge">occ</code> is defined, clTEM will detect atoms that share the same site <strong>if they are placed on consecutive lines</strong> in the .xyz.</p>
+
+<h3 id="thermal-vibrations">Thermal vibrations</h3>
+
+<p>Thermal vibrations are defined by the headers <code class="highlighter-rouge">u</code>, <code class="highlighter-rouge">ux</code>, <code class="highlighter-rouge">uy</code> and <code class="highlighter-rouge">uz</code> that define the isotropic vibration and then the vibration specific to each cartesian axis. <code class="highlighter-rouge">u</code> is set first, then any of <code class="highlighter-rouge">ux</code>, <code class="highlighter-rouge">uy</code> or <code class="highlighter-rouge">uz</code> will override the relevant component of <code class="highlighter-rouge">u</code>. <code class="highlighter-rouge">u</code> is defined here as the mean square displacement of the atom, &lt;u²&gt;, and will have the units of Å² (or nm² if the <code class="highlighter-rouge">nm</code> tag has been set).</p>
+
+<h3 id="example-file">Example file</h3>
+
+<p>Below is a small example file with occupancy and thermal parameters</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6
+occ u
+Pb 0.0 0.0 0.0 1.0 0.0056
+Pb 4.0 0.0 0.0 1.0 0.0056
+Pb 4.0 4.0 0.0 1.0 0.0056
+Pb 0.0 4.0 0.0 1.0 0.0056
+Ti 2.0 2.0 0.0 0.8 0.0103
+Zr 2.0 2.0 0.0 0.2 0.0048
+</code></pre></div></div>
 
   </div>
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Configuration | clTEM</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Configuration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/guide/config.html" />
+<meta property="og:url" content="http://localhost:4000/guide/config.html" />
+<meta property="og:site_name" content="clTEM" />
+<script type="application/ld+json">
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/guide/config.html","headline":"Configuration","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta name="theme-color" content="#6A9D1A">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <!-- no clue what I am doing here... -->
+        <script>
+                if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += " no-touch";
+                }
+        </script>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        <script src="/assets/js/navbar.js"></script>
+
+      </head>
+  <body style="overflow-y: scroll;">
+
+    <script type="text/javascript">
+            watchForHover();
+    </script>
+
+        <div id="page-wrap">
+
+                <section class="page-header">
+
+                        <div class="header-layout" style="text-align: center;">
+                          <img src="/assets/logo.svg" class="project-logo">
+                        </div>
+                    
+                        <div class="header-layout">
+                          <h1 class="project-name">clTEM</h1><br/>
+                          <h2 class="project-tagline">OpenCL accelerated multislice</h2>
+                        </div>
+                    
+                        <a href="https://github.com/JJPPeters/clTEM" class="btn">Source</a>
+                        <a href="https://github.com/JJPPeters/clTEM/releases/download/v0.2a/Install_clTEM_0.2a.exe" class="btn">v0.2a installer (Win x64)</a>
+                        </section>
+<nav>
+<div class="topnav">
+
+        <!-- this menu generation stuff is from  https://gist.github.com/pdarragh/c7ca120604c1a1d8b8de -->
+
+        
+        
+        
+        <a href="/" onclick="closeMenu()">Home</a>
+        
+
+        
+        
+        
+
+        <div class="dropdown" onclick="toggleDropdown()">
+                <a class="dropbtn" href="/guide">Guide</a>
+                <div class="dropdown-content">
+                
+                <a href="/guide/input" onclick="closeMenu()">Input</a>
+                
+                <a href="/guide/opencl" onclick="closeMenu()">OpenCL</a>
+                
+                <a href="/guide/config" onclick="closeMenu()">Configuration</a>
+                
+                <a href="/guide/simulate" onclick="closeMenu()">Simulating</a>
+                
+                <a href="/guide/export" onclick="closeMenu()">Export</a>
+                
+            </div>
+        </div>
+        
+
+        
+        
+        
+        <a href="/compile" onclick="closeMenu()">Compiling</a>
+        
+
+        
+
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+
+</div>
+</nav>
+
+</div>
+
+<main id="centre-content" class="main-content" role="main">
+
+     <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Configuration</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The simulation configuration can be set using the GUI or via a .json file. The .json can set every parameter, so it is daunting to go through every option available. The easiest way to create a .json configuration file is to export one from the GUI. Using the <code>File &rarr; Config... &rarr; Export</code> menu, the current settings in the GUI will be saved to the defined .json file. This will contain every option available if you wish to go through and edit it yourself.</p>
+
+<p><strong>Note</strong> the configuration file has entries for units. These are purely descriptive, and do not define how clTEM will read in the values (i.e. if you change Å to nm, the value will still be read in Å).</p>
+
+<h2 id="general-settings">General settings</h2>
+
+<p>The general simulation settings dialog can be found under the <code>Simulation &rarr; General</code> menu. There are only a few options here, but they can impact the simulations significantly. Firstly, the option to choose the <code class="highlighter-rouge">Potentials</code> used in the simulation is placed here (<strong>Not yet supported</strong>), the default being Kirkland’s potentials from his <a href="https://www.springer.com/gb/book/9781441965325">book</a>.</p>
+
+<p>Next is the <code class="highlighter-rouge">Full 3D integrals</code> setting. This is only used when the simulation is using the Full 3D method and it dictates how many sub-slices are used to approximate the 3D nature of a single slice. Higher values give a better approximation, but also take longer to simulate.</p>
+
+<div class="image-figure">
+    <img style="width:500px;" src="/guide/assets/images/multistem-demo.png" alt="General dialog" />
+  <p>
+      <span class="figure-title">Figure</span> Example of a STEM image being formed from individual simulations of parallel pixels that are summed to form a complete image.
+  </p>
+  </div>
+
+<p>Finally is an option to set the STEM <code class="highlighter-rouge">Parallel pixels</code>. This option enables you to speed up STEM simulations by propagating multiple beam positions through the sample at once. This can greatly speed up simulations due to the need to calculate the potentials only once, but also has several caveats.</p>
+
+<ol>
+  <li>TDS simulations will be less accurate. Due to the fact that multiple beam positions are propagated at once, the thermal vibrations approximation will not be as valid. If the parallel pixels are a significant fraction of the total STEM pixels, the TDS simulation will not be valid. The parallel pixels themselves are chosen at random (i.e. not all next to each other) to try and reduce this effect.</li>
+  <li>Increasing this value can crash the program or even your computer if it is set too high. Increasing this value consumes more memory on the selected device and is possible to increase it too much. You will need to find out what value is acceptable on your hardware</li>
+</ol>
+
+<div class="image-figure">
+    <img style="width:300px;" src="/guide/assets/images/general-dialog.png" alt="General dialog" />
+  <p>
+      <span class="figure-title">Figure</span> General settings dialog.
+  </p>
+  </div>
+
+<h2 id="simulation-area">Simulation Area</h2>
+
+<p>Opening the area dialog through the <code>Simulation &rarr; Area</code> menu or the <code class="highlighter-rouge">Set area</code> buttons allows you to set the area to be simulated. The areas behave differently for each mode. At the bottom of the dialog, all the relevant scales and areas are shown.</p>
+
+<h3 id="tem">TEM</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="/guide/assets/images/area-ctem.png" alt="TEM area" />
+<p>
+    <span class="figure-title">Figure</span> The area options for the conventional TEM simulations. Note that the same range is applied to both x and y directions. 
+</p>
+</div>
+
+<p>In TEM, the area is set very simply, defined by a start and finish position, but with a few caveats. Because the simulation relies on square FFTs, the simulation width and height must be the same. Also, when padding is added to the image, the amount of padding is adjusted to be an integer number of pixels, which will affect the pixel scale.</p>
+
+<h3 id="cbed">CBED</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="/guide/assets/images/area-cbed.png" alt="CBED area" />
+<p>
+    <span class="figure-title">Figure</span> The area options for the CBED simulations, note the extra padding option.
+</p>
+</div>
+
+<p>CBED simulation are only defined by the position of the probe. The padding is automatically added, though an extra padding option is available to adjust the scale in reciprocal space. For example, a CBED disc may only have a radius of 10 mrad, but the simulation scale may only achieve 5 mrad per pixel. This will create a lot of error in simulation the disc (i.e. try drawing a disc in a 4×4 pixel image). In this case, the padding can be increased so that the pixel resolution is smaller and a more accurate disc can be formed.</p>
+
+<h3 id="stem">STEM</h3>
+<div class="image-figure">
+    <img style="width:300px;" src="/guide/assets/images/area-stem.png" alt="STEM area" />
+<p>
+    <span class="figure-title">Figure</span> The area options for the STEM simulations, the extra padding option behaves the same as in CBED.
+</p>
+</div>
+
+<p>In STEM mode, the scan parameters are defined very simply as a start/finish position as well as the number of pixels. This image is not directly affected by the simulation resolution (as opposed to the scan resolution), so can be any size you wish. The simulation resolution does affect the reciprocal resolution achieved, for example, for annular dark field simulations, a higher resolution may be needed to achieve the large collection angles. Equally, the simulation resolution is affected by the range of the scan. A padding option is provided, for the same reason as CBED.</p>
+
+<h2 id="default-settings">Default settings</h2>
+
+<p>clTEM supports user defined default configurations. In the install directory there should be a <code class="highlighter-rouge">microscopes</code> folder (create it if it doesn’t exist). Inside you can save a <code class="highlighter-rouge">default.json</code> that will be loaded by default. This is useful for defining default microscope parameters, such as STEM detectors, so you don’t have to define them every time.</p>
+
+  </div>
+
+</article>
+
+
+</main>
+
+<footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JJPPeters/clTEM">clTEM</a> is maintained by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+    
+        <span class="site-footer-credits">This page was is based off the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a> and modified by <a href="https://github.com/JJPPeters">Jon Peters</a>.</span>
+      </footer>
+
+     <script type="text/javascript">
+        watchForResize()
+        colorTaps()
+      </script>
+  </body>
+</html>

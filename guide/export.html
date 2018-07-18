@@ -5,7 +5,7 @@
         <meta name="theme-color" content="#6A9D1A">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="clTEM/assets/css/style.css">
 
         <!-- no clue what I am doing here... -->
         <script>
@@ -15,7 +15,7 @@
         </script>
         <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-        <script src="/assets/js/navbar.js"></script>
+        <script src="clTEM/assets/js/navbar.js"></script>
 
       </head>
   <body style="overflow-y: scroll;">
@@ -29,7 +29,7 @@
                 <section class="page-header">
 
                         <div class="header-layout" style="text-align: center;">
-                          <img src="/assets/logo.svg" class="project-logo">
+                          <img src="clTEM/assets/logo.svg" class="project-logo">
                         </div>
                     
                         <div class="header-layout">
@@ -48,7 +48,7 @@
         
         
         
-        <a href="/" onclick="closeMenu()">Home</a>
+        <a href="clTEM/" onclick="closeMenu()">Home</a>
         
 
         
@@ -56,18 +56,18 @@
         
 
         <div class="dropdown" onclick="toggleDropdown()">
-                <a class="dropbtn" href="/guide">Guide</a>
+                <a class="dropbtn" href="clTEM/guide">Guide</a>
                 <div class="dropdown-content">
                 
-                <a href="/guide/input" onclick="closeMenu()">Input</a>
+                <a href="clTEM/guide/input" onclick="closeMenu()">Input</a>
                 
-                <a href="/guide/opencl" onclick="closeMenu()">OpenCL</a>
+                <a href="clTEM/guide/opencl" onclick="closeMenu()">OpenCL</a>
                 
-                <a href="/guide/config" onclick="closeMenu()">Configuration</a>
+                <a href="clTEM/guide/config" onclick="closeMenu()">Configuration</a>
                 
-                <a href="/guide/simulate" onclick="closeMenu()">Simulating</a>
+                <a href="clTEM/guide/simulate" onclick="closeMenu()">Simulating</a>
                 
-                <a href="/guide/export" onclick="closeMenu()">Export</a>
+                <a href="clTEM/guide/export" onclick="closeMenu()">Export</a>
                 
             </div>
         </div>
@@ -76,7 +76,7 @@
         
         
         
-        <a href="/compile" onclick="closeMenu()">Compiling</a>
+        <a href="clTEM/compile" onclick="closeMenu()">Compiling</a>
         
 
         
@@ -90,20 +90,9 @@
 
 <main id="centre-content" class="main-content" role="main">
 
-     <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">Export</h1>
-  </header>
-
-  <div class="post-content">
-    <p>After a simulation has been completed, the data can be exported to file by right clicking on the image and selecting <code class="highlighter-rouge">Export</code> and then one of <code class="highlighter-rouge">RGB</code> or <code class="highlighter-rouge">Data</code>. Selecting <code class="highlighter-rouge">RGB</code> will let you save a .bmp image that is easily opened in any image viewer/editor, but the data will be scaled 8-bit (i.e. it will be integer values in the range 0-255). Selecting <code class="highlighter-rouge">Data</code> will let you save a full 32-bit floating point .tif file. This file will not open in many image viewers/editors but contains the full accuracy of the simulation. These images can however be opened in programs such as ImageJ and the Gatan Microscopy Suite.</p>
+     <p>After a simulation has been completed, the data can be exported to file by right clicking on the image and selecting <code class="highlighter-rouge">Export</code> and then one of <code class="highlighter-rouge">RGB</code> or <code class="highlighter-rouge">Data</code>. Selecting <code class="highlighter-rouge">RGB</code> will let you save a .bmp image that is easily opened in any image viewer/editor, but the data will be scaled 8-bit (i.e. it will be integer values in the range 0-255). Selecting <code class="highlighter-rouge">Data</code> will let you save a full 32-bit floating point .tif file. This file will not open in many image viewers/editors but contains the full accuracy of the simulation. These images can however be opened in programs such as ImageJ and the Gatan Microscopy Suite.</p>
 
 <p>Whenever you save an image, a partnet .json file will be created containing all of the relevant parameters used in the simulation.</p>
-
-  </div>
-
-</article>
 
 
 </main>

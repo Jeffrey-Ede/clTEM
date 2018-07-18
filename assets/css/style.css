@@ -144,7 +144,7 @@ a { color: #1e6bb8; text-decoration: none; }
 @media screen and (min-width: 681px) and (max-width: 64em) { .btn { padding: 0.4rem 0.9rem; font-size: 0.9rem; } }
 @media screen and (max-width: 680px) { .btn { display: block; width: 100%; padding: 0.55rem; font-size: 0.9rem; }
   .btn + .btn { margin-top: 1rem; margin-left: 0; } }
-.page-header { color: #fff; background: linear-gradient(130deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.8)), url("/assets/texture.png") repeat left, #505050; }
+.page-header { color: #fff; background: linear-gradient(130deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.8)), url("/clTEM/assets/texture.png") repeat left, #505050; }
 
 @media screen and (min-width: 64em) { .page-header { padding: 2rem 6rem; } }
 @media screen and (min-width: 681px) and (max-width: 64em) { .page-header { padding: 1rem 4rem; } }

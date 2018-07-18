@@ -5,7 +5,7 @@
         <meta name="theme-color" content="#6A9D1A">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="clTEM/assets/css/style.css">
 
         <!-- no clue what I am doing here... -->
         <script>
@@ -15,7 +15,7 @@
         </script>
         <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-        <script src="/assets/js/navbar.js"></script>
+        <script src="clTEM/assets/js/navbar.js"></script>
 
       </head>
   <body style="overflow-y: scroll;">
@@ -29,7 +29,7 @@
                 <section class="page-header">
 
                         <div class="header-layout" style="text-align: center;">
-                          <img src="/assets/logo.svg" class="project-logo">
+                          <img src="clTEM/assets/logo.svg" class="project-logo">
                         </div>
                     
                         <div class="header-layout">
@@ -48,7 +48,7 @@
         
         
         
-        <a href="/" onclick="closeMenu()">Home</a>
+        <a href="clTEM/" onclick="closeMenu()">Home</a>
         
 
         
@@ -56,18 +56,18 @@
         
 
         <div class="dropdown" onclick="toggleDropdown()">
-                <a class="dropbtn" href="/guide">Guide</a>
+                <a class="dropbtn" href="clTEM/guide">Guide</a>
                 <div class="dropdown-content">
                 
-                <a href="/guide/input" onclick="closeMenu()">Input</a>
+                <a href="clTEM/guide/input" onclick="closeMenu()">Input</a>
                 
-                <a href="/guide/opencl" onclick="closeMenu()">OpenCL</a>
+                <a href="clTEM/guide/opencl" onclick="closeMenu()">OpenCL</a>
                 
-                <a href="/guide/config" onclick="closeMenu()">Configuration</a>
+                <a href="clTEM/guide/config" onclick="closeMenu()">Configuration</a>
                 
-                <a href="/guide/simulate" onclick="closeMenu()">Simulating</a>
+                <a href="clTEM/guide/simulate" onclick="closeMenu()">Simulating</a>
                 
-                <a href="/guide/export" onclick="closeMenu()">Export</a>
+                <a href="clTEM/guide/export" onclick="closeMenu()">Export</a>
                 
             </div>
         </div>
@@ -76,7 +76,7 @@
         
         
         
-        <a href="/compile" onclick="closeMenu()">Compiling</a>
+        <a href="clTEM/compile" onclick="closeMenu()">Compiling</a>
         
 
         
@@ -90,14 +90,7 @@
 
 <main id="centre-content" class="main-content" role="main">
 
-     <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">Configuration</h1>
-  </header>
-
-  <div class="post-content">
-    <p>The simulation configuration can be set using the GUI or via a .json file. The .json can set every parameter, so it is daunting to go through every option available. The easiest way to create a .json configuration file is to export one from the GUI. Using the <code>File &rarr; Config... &rarr; Export</code> menu, the current settings in the GUI will be saved to the defined .json file. This will contain every option available if you wish to go through and edit it yourself.</p>
+     <p>The simulation configuration can be set using the GUI or via a .json file. The .json can set every parameter, so it is daunting to go through every option available. The easiest way to create a .json configuration file is to export one from the GUI. Using the <code>File &rarr; Config... &rarr; Export</code> menu, the current settings in the GUI will be saved to the defined .json file. This will contain every option available if you wish to go through and edit it yourself.</p>
 
 <p><strong>Note</strong> the configuration file has entries for units. These are purely descriptive, and do not define how clTEM will read in the values (i.e. if you change Å to nm, the value will still be read in Å).</p>
 
@@ -108,7 +101,7 @@
 <p>Next is the <code class="highlighter-rouge">Full 3D integrals</code> setting. This is only used when the simulation is using the Full 3D method and it dictates how many sub-slices are used to approximate the 3D nature of a single slice. Higher values give a better approximation, but also take longer to simulate.</p>
 
 <div class="image-figure">
-    <img style="width:500px;" src="/guide/assets/images/multistem-demo.png" alt="General dialog" />
+    <img style="width:500px;" src="/clTEM/guide/assets/images/multistem-demo.png" alt="General dialog" />
   <p>
       <span class="figure-title">Figure</span> Example of a STEM image being formed from individual simulations of parallel pixels that are summed to form a complete image.
   </p>
@@ -122,7 +115,7 @@
 </ol>
 
 <div class="image-figure">
-    <img style="width:300px;" src="/guide/assets/images/general-dialog.png" alt="General dialog" />
+    <img style="width:300px;" src="/clTEM/guide/assets/images/general-dialog.png" alt="General dialog" />
   <p>
       <span class="figure-title">Figure</span> General settings dialog.
   </p>
@@ -134,7 +127,7 @@
 
 <h3 id="tem">TEM</h3>
 <div class="image-figure">
-    <img style="width:300px;" src="/guide/assets/images/area-ctem.png" alt="TEM area" />
+    <img style="width:300px;" src="/clTEM/guide/assets/images/area-ctem.png" alt="TEM area" />
 <p>
     <span class="figure-title">Figure</span> The area options for the conventional TEM simulations. Note that the same range is applied to both x and y directions. 
 </p>
@@ -144,7 +137,7 @@
 
 <h3 id="cbed">CBED</h3>
 <div class="image-figure">
-    <img style="width:300px;" src="/guide/assets/images/area-cbed.png" alt="CBED area" />
+    <img style="width:300px;" src="/clTEM/guide/assets/images/area-cbed.png" alt="CBED area" />
 <p>
     <span class="figure-title">Figure</span> The area options for the CBED simulations, note the extra padding option.
 </p>
@@ -154,7 +147,7 @@
 
 <h3 id="stem">STEM</h3>
 <div class="image-figure">
-    <img style="width:300px;" src="/guide/assets/images/area-stem.png" alt="STEM area" />
+    <img style="width:300px;" src="/clTEM/guide/assets/images/area-stem.png" alt="STEM area" />
 <p>
     <span class="figure-title">Figure</span> The area options for the STEM simulations, the extra padding option behaves the same as in CBED.
 </p>
@@ -165,10 +158,6 @@
 <h2 id="default-settings">Default settings</h2>
 
 <p>clTEM supports user defined default configurations. In the install directory there should be a <code class="highlighter-rouge">microscopes</code> folder (create it if it doesn’t exist). Inside you can save a <code class="highlighter-rouge">default.json</code> that will be loaded by default. This is useful for defining default microscope parameters, such as STEM detectors, so you don’t have to define them every time.</p>
-
-  </div>
-
-</article>
 
 
 </main>

@@ -1,0 +1,20 @@
+QPushButton {
+    margin: 0px;
+    min-width: 80px;
+    min-height: 24px;
+    padding: 2px 4px;
+}
+
+QComboBox {
+    margin: 1px;
+    min-width: 60px;
+    min-height: 22px;
+    padding: 2px 5px;
+}
+
+QLineEdit {
+    margin: 1px;
+    min-width: 74px;
+    min-height: 22px;
+    padding: 2px 4px;
+}

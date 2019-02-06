@@ -93,7 +93,11 @@ public:
 private:
     static void setNativeTheme() {
         // remove our stylesheet
-        qApp->setStyleSheet("");
+        QFile f(":/Theme/size-style.qss");
+        f.open(QFile::ReadOnly | QFile::Text);
+        QTextStream in(&f);
+        qApp->setStyleSheet(in.readAll());
+        f.close();
         // reset our palette
         qApp->setPalette(QApplication::style()->standardPalette());
     }

@@ -1,3 +1,27 @@
+QPushButton {
+    margin: 0px;
+    min-width: 80px;
+    min-height: 24px;
+    padding: 2px 4px;
+}
+
+QComboBox {
+    margin: 0px;
+    min-width: 60px;
+    min-height: 24px;
+    padding: 2px 5px;
+}
+
+QLineEdit {
+    margin: 0px;
+    min-width: 74px;
+    min-height: 24px;
+    padding: 2px 4px;
+}
+
+
+
+
 /*a lot of inspiration is taken from: https://github.com/martinrotter/qt-material-stylesheet*/
 
 FlatTitleBar {
@@ -12,9 +36,11 @@ QWidget:window {
 
 QLineEdit {
 	background: {d1};
-	border: 1px transparent {l2};
 	color: {l1}; /*text colour*/
 	selection-background-color: {a1};
+	border-color: {d1};
+	border-style: solid;
+	border-width: 1px;
 }
 
 /* === QComboBox === */
@@ -22,7 +48,7 @@ QLineEdit {
 QComboBox {
 	color: {l1};
 	background-color: {d1};
-	border: 0px solid transparent;
+	border: 1px solid {d1};
 }
 
 QComboBox QAbstractItemView
@@ -117,9 +143,7 @@ QScrollBar::sub-page:vertical {
 QPushButton {
 	background-color: {a1};
 	color: {d1};
-	border: 0px solid transparent;
-	padding: 4px 22px;
-	min-height: 18 px;
+	border: 1px solid transparent;
 }
 
 QPushButton:hover {

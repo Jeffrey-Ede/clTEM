@@ -1,3 +1,18 @@
+QPushButton[accessibleName="title_min"] {
+	min-width: 35px;
+    min-height: 23px;
+}
+
+QPushButton[accessibleName="title_max"] {
+	min-width: 35px;
+    min-height: 23px;
+}
+
+QPushButton[accessibleName="title_close"] {
+	min-width: 35px;
+    min-height: 23px;
+}
+
 QPushButton {
     margin: 0px;
     min-width: 80px;

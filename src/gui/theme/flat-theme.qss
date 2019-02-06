@@ -1,3 +1,7 @@
+QWidget[accessibleName="sizer_widget"] {
+    min-height: 30px;
+}
+
 QPushButton[accessibleName="title_min"] {
 	min-width: 35px;
     min-height: 23px;
@@ -33,7 +37,6 @@ QLineEdit {
     min-height: 24px;
     padding: 2px 4px;
 }
-
 
 
 

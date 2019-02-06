@@ -59,6 +59,9 @@
       </spacer>
      </item>
      <item>
+      <widget class="QWidget" name="sizeWidget" native="true"/>
+     </item>
+     <item>
       <widget class="QComboBox" name="cmbComplex">
        <property name="minimumSize">
         <size>

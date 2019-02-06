@@ -1,3 +1,7 @@
+QWidget[accessibleName="sizer_widget"] {
+    min-height: 30px;
+}
+
 QPushButton {
     margin: 0px;
     min-width: 80px;

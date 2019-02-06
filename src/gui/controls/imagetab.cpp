@@ -11,8 +11,10 @@ ImageTab::ImageTab(QWidget *parent, std::string name, TabType t, bool is_complex
 
     if (!is_complex) {
         ui->cmbComplex->setEnabled(false);
-        ui->cmbComplex->setFixedWidth(0); // do this, so the ui doesnt resize
+        ui->cmbComplex->setVisible(false); // do this, so the ui doesnt resize
     }
+
+    ui->sizeWidget->setAccessibleName("sizer_widget");
 
     connect(ui->widget, &ImagePlotWidget::saveDataClicked, this, &ImageTab::forwardSaveData);
     connect(ui->widget, &ImagePlotWidget::saveImageClicked, this, &ImageTab::forwardSaveImage);

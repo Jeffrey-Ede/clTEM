@@ -21,3 +21,7 @@ QLineEdit {
     min-height: 22px;
     padding: 2px 4px;
 }
+
+QTabBar::tab {
+	min-height: 24px;
+}

@@ -383,11 +383,18 @@ QTableWidget::item:selected {
     background: {a1};
 }
 
-QHeaderView::section {
+QHeaderView {
     background-color: {d1};
     padding: 4px;
     border-style: none;
     border: 0px solid transparent;
     color: {l1};
     border-bottom: 2px solid {a1};
+}
+
+QHeaderView::section {
+    background-color: {d1};
+    border-style: none;
+    border: 0px solid transparent;
+    color: {l1};
 }

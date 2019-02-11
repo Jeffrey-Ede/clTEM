@@ -16,12 +16,16 @@
 #endif
 
 int main(int argc, char *argv[]) {
+    // Set some things to try and help with GUI scaling
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication::setDesktopSettingsAware(true);
+
     // Create our application
     QApplication a(argc, argv);
 
     // set the app details so we can save/load settings (this is critical for using the QStandardPaths)
-    QCoreApplication::setOrganizationName("PetersSoft");
-    QCoreApplication::setApplicationName("clTEM");
+    QApplication::setOrganizationName("PetersSoft");
+    QApplication::setApplicationName("clTEM");
 
     // Set up logging
 

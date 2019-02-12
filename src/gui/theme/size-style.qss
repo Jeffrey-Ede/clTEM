@@ -5,23 +5,23 @@ QWidget[accessibleName="sizer_widget"] {
 QPushButton {
     margin: -1px;
     min-width: 80px;
-    min-height: 24px;
+    min-height: 22px;
     padding: 2px 4px;
 }
 
 QComboBox {
     min-width: 58px;
-    min-height: 22px;
+    min-height: 20px;
     padding: 2px 5px;
 }
 
 QLineEdit {
     margin: 0px;
     min-width: 74px;
-    min-height: 22px;
+    min-height: 20px;
     padding: 2px 4px;
 }
 
 QTabBar::tab {
-	min-height: 24px;
+	min-height: 22px;
 }

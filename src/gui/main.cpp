@@ -17,8 +17,9 @@
 
 int main(int argc, char *argv[]) {
     // Set some things to try and help with GUI scaling
+
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication::setDesktopSettingsAware(true);
+    qputenv("QT_AUTO_SCREEN_SCALE_FACTOR ", QByteArray("1"));
 
     // Create our application
     QApplication a(argc, argv);
